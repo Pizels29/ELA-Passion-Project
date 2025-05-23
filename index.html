@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Study Buddy</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>AI Study Buddy 📚</h1>
+    <div id="questionnaire">
+      <label>What class are you studying?</label>
+      <input type="text" id="classInput" placeholder="e.g., Biology, Algebra II">
+
+      <label>How many hours can you study per day?</label>
+      <input type="number" id="hoursInput" placeholder="e.g., 2">
+
+      <label>What's your current understanding level? (1–10)</label>
+      <input type="number" id="levelInput" min="1" max="10">
+
+      <button onclick="generatePlan()">Generate Study Plan</button>
+    </div>
+
+    <div id="planSection" class="hidden">
+      <h2>Your Personalized Study Plan</h2>
+      <div id="studyPlan"></div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script> <!-- Markdown parser -->
+  <script defer src="/script.js"></script>
+</body>
+</html>
